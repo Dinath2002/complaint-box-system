@@ -58,16 +58,16 @@ $flash = $_GET['m'] ?? '';
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Manage Users | Admin</title>
 <style>
-  :root{--logo:#ffbd59;--muted:#4b5563;--black:#000;--white:#fff}
+  :root{--black:#0b1b2b;--logo:#0b5ea8;--logo-rgb:11,94,168;--white:#fff;--muted:#6b7280;--surface:#f7fbff}
   body{font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;margin:0}
-  .top{background:#000;color:#fff;padding:12px 18px;display:flex;align-items:center;justify-content:space-between}
+  .top{background:var(--black);color:#fff;padding:12px 18px;display:flex;align-items:center;justify-content:space-between}
   .wrap{max-width:1100px;margin:24px auto;padding:0 16px}
   h1{margin:0 0 10px}
-  .card{background:#fff;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.06);padding:16px}
+  .card{background:var(--surface);border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.06);padding:16px}
   .row{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap;margin-bottom:12px}
   label{display:block;font-weight:600;margin-bottom:6px}
   input[type=text],select{padding:10px;border:1px solid #e5e7eb;border-radius:8px;min-width:220px}
-  .btn{background:var(--logo);border:none;color:#000;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer}
+  .btn{background:var(--logo);border:none;color:var(--white);padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer}
   table{width:100%;border-collapse:collapse}
   th,td{padding:10px;border-bottom:1px solid #eee;text-align:left;font-size:14px}
   th{background:#fafafa}

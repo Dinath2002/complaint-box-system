@@ -76,12 +76,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Create Handler | Admin</title>
 <style>
+  :root{--black:#0b1b2b;--logo:#0b5ea8;--logo-rgb:11,94,168;--white:#fff;--muted:#6b7280;--surface:#f7fbff}
   body{font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;margin:0}
-  .wrap{max-width:640px;margin:40px auto;background:#fff;padding:20px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.06)}
+  .wrap{max-width:640px;margin:40px auto;background:var(--surface);padding:20px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.06)}
   h1{margin:0 0 10px}
   label{display:block;margin-top:12px;font-weight:600}
   input[type=text],input[type=email],input[type=password]{width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px;margin-top:6px;font-size:14px}
-  .btn{margin-top:14px;background:#ffbd59;color:#000;padding:10px 14px;border:none;border-radius:8px;font-weight:700;cursor:pointer}
+  .btn{margin-top:14px;background:var(--logo);color:var(--white);padding:10px 14px;border:none;border-radius:8px;font-weight:700;cursor:pointer}
   .msg{background:#ecfdf5;color:#065f46;padding:10px;border-radius:6px;margin-bottom:10px}
   .err{background:#fee2e2;color:#991b1b;padding:10px;border-radius:6px;margin-bottom:10px}
   .back{display:inline-block;margin-top:12px}

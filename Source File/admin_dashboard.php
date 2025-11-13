@@ -16,7 +16,7 @@ $adminName = htmlspecialchars($_SESSION['user']['name'] ?? 'Admin');
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Admin Dashboard | DCBS</title>
 <style>
-  :root{--logo:#ffbd59;--muted:#4b5563;--black:#000;--white:#fff}
+  :root{--black:#0b1b2b;--logo:#0b5ea8;--logo-rgb:11,94,168;--white:#fff;--muted:#6b7280;--surface:#f7fbff}
   *{box-sizing:border-box}
   body{font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;margin:0;color:#111}
   .top{background:var(--black);color:#fff;padding:12px 18px;display:flex;align-items:center;justify-content:space-between}
@@ -25,10 +25,10 @@ $adminName = htmlspecialchars($_SESSION['user']['name'] ?? 'Admin');
   h1{margin:0 0 8px}
   .muted{color:var(--muted)}
   .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:16px}
-  .card{background:#fff;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.06);padding:18px}
+  .card{background:var(--surface);border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.06);padding:18px}
   .card h3{margin:0 0 6px}
-  .btn{display:inline-block;background:var(--logo);color:#000;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:700}
-  .btn-outline{display:inline-block;border:1px solid #e5e7eb;background:#fff;color:#111;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:700}
+  .btn{display:inline-block;background:var(--logo);color:var(--white);text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:700}
+  .btn-outline{display:inline-block;border:1px solid rgba(0,0,0,.06);background:transparent;color:var(--logo);text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:700}
   .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
 </style>
 </head>
