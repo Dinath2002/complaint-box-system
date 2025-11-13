@@ -17,7 +17,7 @@ $adminName = htmlspecialchars($_SESSION['user']['name'] ?? 'Admin');
 <title>Admin Dashboard | DCBS</title>
 <style>
   *{box-sizing:border-box}
-  body{font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;margin:0;color:#111}
+  body{font-family:Arial,Helvetica,sans-serif;background:var(--page-bg);margin:0;color:#111}
   .top{background:var(--black);color:#fff;padding:12px 18px;display:flex;align-items:center;justify-content:space-between}
   .top a{color:#fff;text-decoration:none;margin-left:14px}
   .wrap{max-width:1100px;margin:24px auto;padding:0 16px}

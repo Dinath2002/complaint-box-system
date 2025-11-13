@@ -3,12 +3,38 @@
    ========================================================================== */
 
 /* Root & base */
-:root{ --black:#0b1b2b; --logo:#0b5ea8; --logo-rgb:11,94,168; --white:#fff; --muted:#6b7280; --surface:#f7fbff; --surface-2:#f8fafc; --card-border:#e6eef9 }
+:root{
+  --black:#0b1b2b;
+  --logo:#0b5ea8;
+  --logo-rgb:11,94,168;
+  --white:#fff;
+  --muted:#6b7280;
+  --surface:#f7fbff;
+  --surface-2:#f8fafc;
+  --card-border:#e6eef9;
+
+  /* common UI tokens */
+  --page-bg:#f4f6f8;
+  --input-border:#e5e7eb;
+  --table-head-bg:#fafafa;
+
+  /* status colors */
+  --status-success-bg:#ecfdf5; --status-success-color:#065f46;
+  --status-warn-bg:#fff7ed; --status-warn-color:#7a2e0e;
+  --status-error-bg:#fee2e2; --status-error-color:#991b1b;
+  --status-handler-bg:#e6f4ff; --status-handler-color:var(--logo);
+  --status-complainer-bg:#fff0e6; --status-complainer-color:#7a3b00;
+  --status-danger-bg:#ef4444; --status-danger-color:#fff;
+
+  /* transitions */
+  --transition-fast:.12s ease;
+  --transition-medium:.18s ease;
+}
 *{box-sizing:border-box}
 html,body{height:100%}
 html{overflow-y:scroll} /* keep scrollbar slot to avoid topbar shift */
 body{
-  margin:0; background:#f4f6f8; color:#111;
+  margin:0; background:var(--page-bg); color:#111;
   font-family:'Inter',system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 
@@ -23,12 +49,12 @@ a{color:inherit} a:hover{opacity:.96}
 .hr{border:none;border-top:1px solid #eee;margin:16px 0}
 
 /* Buttons */
-.btn,.button{display:inline-block;appearance:none;border:0;border-radius:8px;padding:10px 14px;font-weight:700;cursor:pointer;text-decoration:none;box-shadow:0 6px 18px rgba(var(--logo-rgb),.12);transition:transform .12s ease,box-shadow .12s ease}
+.btn,.button{display:inline-block;appearance:none;border:0;border-radius:8px;padding:10px 14px;font-weight:700;cursor:pointer;text-decoration:none;box-shadow:0 6px 18px rgba(var(--logo-rgb),.12);transition:transform var(--transition-fast),box-shadow var(--transition-fast),background-color var(--transition-medium),color var(--transition-medium)}
 .btn-primary,.button{background:var(--logo);color:var(--white)}
-.btn:hover,.button:hover{opacity:.96;transform:translateY(-2px);box-shadow:0 10px 30px rgba(var(--logo-rgb),.18)}
+.btn:hover,.button:hover{opacity:.98;transform:translateY(-2px);box-shadow:0 10px 30px rgba(var(--logo-rgb),.18)}
 
 /* Outline variant used across the app */
-.btn-outline{display:inline-block;border:1px solid rgba(0,0,0,.06);background:transparent;color:var(--logo);padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer;transition:box-shadow .12s ease, transform .12s ease}
+.btn-outline{display:inline-block;border:1px solid rgba(0,0,0,.06);background:transparent;color:var(--logo);padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer;transition:box-shadow var(--transition-fast), transform var(--transition-fast), color var(--transition-medium)}
 .btn-outline:hover{box-shadow:0 8px 20px rgba(var(--logo-rgb),.08);transform:translateY(-1px)}
 .btn-sm{padding:6px 10px;border-radius:6px}
 
@@ -84,7 +110,7 @@ a{color:inherit} a:hover{opacity:.96}
 .card .num{margin-top:10px;font-size:22px;font-weight:700}
 
 /* Tables */
-.table-wrap{background:var(--surface);padding:16px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.04)}
+.table-wrap{background:var(--surface);padding:16px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.04);transition:background-color var(--transition-medium),box-shadow var(--transition-medium)}
 .table{width:100%;border-collapse:collapse}
 .table th,.table td{padding:10px;border-bottom:1px solid #eee;text-align:left;font-size:14px;vertical-align:middle}
 .table th{background:#fafafa;font-weight:700;position:relative}
@@ -117,10 +143,11 @@ a{color:inherit} a:hover{opacity:.96}
   width:100%;
   height:36px;
   padding:8px 10px;
-  border:1px solid #e5e7eb;
+  border:1px solid var(--input-border);
   border-radius:8px;
-  background:#fff;
+  background:var(--white);
   color:#111;
+  transition:border-color var(--transition-fast),box-shadow var(--transition-fast);
 }
 .form-inline button{
   width:100%;                 /* match select width */
@@ -153,8 +180,8 @@ label{display:block;margin-top:12px;font-weight:600}
 
 /* Inputs */
 input[type=email],input[type=password],input[type=text],textarea,select{
-  width:100%; padding:10px; border:1px solid #e5e7eb; border-radius:8px;
-  margin-top:6px; font-size:14px; background:#fff; color:#111;
+  width:100%; padding:10px; border:1px solid var(--input-border); border-radius:8px;
+  margin-top:6px; font-size:14px; background:var(--white); color:#111; transition:border-color var(--transition-fast),box-shadow var(--transition-fast);
 }
 
 /* Radios row on auth pages */
@@ -172,7 +199,7 @@ input[type=email],input[type=password],input[type=text],textarea,select{
 
 /* Forms (shared helper classes) */
 .form label{display:block;margin-top:12px;font-weight:600}
-.form input,.form textarea,.form select{width:100%;padding:10px;margin-top:6px;border:1px solid #ccc;border-radius:6px;font-size:14px;background:#fff;color:#111}
+.form input,.form textarea,.form select{width:100%;padding:10px;margin-top:6px;border:1px solid #ccc;border-radius:6px;font-size:14px;background:var(--white);color:#111;transition:border-color var(--transition-fast),box-shadow var(--transition-fast)}
 .form-complaint{max-width:600px}
 
 /* Home hero */

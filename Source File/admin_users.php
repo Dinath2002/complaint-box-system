@@ -58,26 +58,26 @@ $flash = $_GET['m'] ?? '';
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Manage Users | Admin</title>
 <style>
-  body{font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;margin:0}
+  body{font-family:Arial,Helvetica,sans-serif;background:var(--page-bg);margin:0}
   .top{background:var(--black);color:#fff;padding:12px 18px;display:flex;align-items:center;justify-content:space-between}
   .wrap{max-width:1100px;margin:24px auto;padding:0 16px}
   h1{margin:0 0 10px}
   .card{background:var(--surface);border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.06);padding:16px}
   .row{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap;margin-bottom:12px}
   label{display:block;font-weight:600;margin-bottom:6px}
-  input[type=text],select{padding:10px;border:1px solid #e5e7eb;border-radius:8px;min-width:220px}
+  input[type=text],select{padding:10px;border:1px solid var(--input-border);border-radius:8px;min-width:220px;transition:border-color var(--transition-fast),box-shadow var(--transition-fast)}
   .btn{background:var(--logo);border:none;color:var(--white);padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer}
   table{width:100%;border-collapse:collapse}
   th,td{padding:10px;border-bottom:1px solid #eee;text-align:left;font-size:14px}
-  th{background:#fafafa}
+  th{background:var(--table-head-bg)}
   .badge{display:inline-block;padding:4px 8px;border-radius:6px;font-weight:700;font-size:12px}
-  .role-admin{background:#111;color:#fff}
-  .role-handler{background:#e6f4ff;color:#0b5ea8}
-  .role-complainer{background:#fff0e6;color:#7a3b00}
-  .danger{background:#ef4444;color:#fff}
-  .muted{color:#6b7280}
-  .flash{background:#ecfdf5;color:#065f46;padding:10px;border-radius:8px;margin-bottom:10px}
-  .warn{background:#fff7ed;color:#7a2e0e;padding:10px;border-radius:8px;margin-bottom:10px}
+  .role-admin{background:#111;color:var(--white)}
+  .role-handler{background:var(--status-handler-bg);color:var(--status-handler-color)}
+  .role-complainer{background:var(--status-complainer-bg);color:var(--status-complainer-color)}
+  .danger{background:var(--status-danger-bg);color:var(--status-danger-color);transition:background-color var(--transition-fast),box-shadow var(--transition-fast)}
+  .muted{color:var(--muted)}
+  .flash{background:var(--status-success-bg);color:var(--status-success-color);padding:10px;border-radius:8px;margin-bottom:10px}
+  .warn{background:var(--status-warn-bg);color:var(--status-warn-color);padding:10px;border-radius:8px;margin-bottom:10px}
   .top a{color:#fff;text-decoration:none;margin-left:12px}
 </style>
 </head>

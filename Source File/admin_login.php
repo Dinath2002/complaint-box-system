@@ -73,13 +73,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Admin Login | DCBS</title>
 <style>
-  body{font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;margin:0;padding:40px}
+  body{font-family:Arial,Helvetica,sans-serif;background:var(--page-bg);margin:0;padding:40px}
   .card{max-width:520px;margin:40px auto;background:var(--surface);padding:24px;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,0.06)}
   h1{margin:0 0 12px;color:#111}
   label{display:block;margin-top:12px;font-weight:600}
-  input[type=email],input[type=password]{width:100%;padding:10px;border-radius:8px;border:1px solid #e5e7eb;margin-top:6px}
-  .btn{background:var(--logo);border:none;color:var(--white);padding:10px 14px;border-radius:8px;font-weight:700;margin-top:14px;cursor:pointer}
-  .err{background:#fee2e2;color:#991b1b;padding:10px;border-radius:6px;margin-bottom:12px}
+  input[type=email],input[type=password]{width:100%;padding:10px;border-radius:8px;border:1px solid var(--input-border);margin-top:6px;transition:border-color var(--transition-fast),box-shadow var(--transition-fast)}
+  .btn{background:var(--logo);border:none;color:var(--white);padding:10px 14px;border-radius:8px;font-weight:700;margin-top:14px;cursor:pointer;transition:box-shadow var(--transition-fast),transform var(--transition-fast)}
+  .err{background:var(--status-error-bg);color:var(--status-error-color);padding:10px;border-radius:6px;margin-bottom:12px}
   .note{font-size:13px;color:var(--muted);margin-top:12px}
 </style>
 </head>
