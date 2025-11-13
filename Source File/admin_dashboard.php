@@ -16,7 +16,6 @@ $adminName = htmlspecialchars($_SESSION['user']['name'] ?? 'Admin');
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Admin Dashboard | DCBS</title>
 <style>
-  :root{--black:#0b1b2b;--logo:#0b5ea8;--logo-rgb:11,94,168;--white:#fff;--muted:#6b7280;--surface:#f7fbff}
   *{box-sizing:border-box}
   body{font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;margin:0;color:#111}
   .top{background:var(--black);color:#fff;padding:12px 18px;display:flex;align-items:center;justify-content:space-between}
